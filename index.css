@@ -1,0 +1,231 @@
+:root {
+    --primary: #004225; /* Forest Green (Public Edu Identity) */
+    --secondary: #FFB800; /* Warm Accent Yellow */
+    --dark: #1A1A1A;
+    --light: #F4F6F4;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 8px 5%;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-bar span {
+    margin-right: 15px;
+}
+
+.badge-emis {
+    background-color: var(--secondary);
+    color: var(--dark);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 66, 37, 0.85), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+    color: var(--white);
+    padding: 100px 5% 80px 5%;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    background-color: var(--secondary);
+    color: var(--dark);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Content Layout */
+.section-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.section-title {
+    border-bottom: 2px solid var(--primary); 
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+
+.table-wrapper, .contact-wrapper {
+    margin-top: 50px;
+}
+
+/* Data Tables */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    margin-top: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.info-table th, .info-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.info-table tr:nth-child(even) {
+    background-color: var(--light);
+}
+
+.info-box {
+    background: #e2ede8; 
+    padding: 20px; 
+    border-radius: 6px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-tag {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    nav ul li {
+        margin: 0;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
